@@ -42,7 +42,7 @@ export default class extends PureComponent {
   render() {
     const { show } = this.state;
     return (
-      <PageContainer>
+      <PageContainer {...this.props}>
         <Container>
           <Transition
             native
