@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
+import PageContainer from "components/PageContainer ";
 
 export default class extends PureComponent {
   render() {
-    return <div>Home</div>;
+    return <PageContainer>Home</PageContainer>;
   }
 }

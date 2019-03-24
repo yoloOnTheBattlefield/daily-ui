@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
+import PageContainer from "components/PageContainer ";
 
 export default class extends PureComponent {
   render() {
-    return <div>DAILYUI 001</div>;
+    return <PageContainer {...this.props}>DAILYUI 001</PageContainer>;
   }
 }

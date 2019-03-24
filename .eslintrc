@@ -1,9 +1,7 @@
 {
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "moduleDirectory": ["node_modules", "src/"]
-      }
-    }
+  "extends": "react-app",
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
   }
 }
