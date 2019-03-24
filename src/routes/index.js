@@ -6,24 +6,19 @@ import Navigation from "components/Navigation";
 import Home from "./Home";
 import UI001 from "./UI001";
 
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-`;
+const Container = styled.div``;
 
 const RoutesContainer = styled.div`
   position: relative;
-  width: calc(100% - 300px);
-  background: #272727;
+  width: 100%;
+  height: 100vh;
 `;
 
 export default () => (
   <Route
     render={({ location, ...rest }) => (
       <Container>
-        <Navigation />
+        <Navigation location={location} />
         <RoutesContainer>
           <Transition
             native

@@ -1,34 +1,42 @@
 import React, { PureComponent } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.nav`
-  width: 300px;
-  height: 100vh;
-  overflow-y: scroll;
-`;
-
-export default withRouter(
-  class extends PureComponent {
-    render() {
-      const location = this.props.location.pathname.split("/");
-
-      return (
-        <Container>
-          {location.length > 2 && (
-            <div>Current {location[location.length - 1]}</div>
-          )}
-
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/ui/001">UI 001</Link>
-            </li>
-          </ul>
-        </Container>
-      );
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  cursor: none;
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    li {
+      margin: 0 16px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
     }
   }
-);
+`;
+
+export default class Navigation extends PureComponent {
+  render() {
+    return (
+      <Container>
+        <ul>
+          <li>
+            <Link to="/">CRISTIAN FLOREA</Link>
+          </li>
+          <li>
+            <Link to="/contact">CONTACT</Link>
+          </li>
+          <li>
+            <Link to="/ui/001">UI 001</Link>
+          </li>
+        </ul>
+      </Container>
+    );
+  }
+}

@@ -5,7 +5,7 @@ import { animated } from "react-spring/renderprops";
 const Container = styled(animated.div)`
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +14,6 @@ const Container = styled(animated.div)`
 export default class PageContainer extends React.PureComponent {
   render() {
     const { style, children } = this.props;
-    return (
-      <Container style={{ ...style, background: `#ef5350` }}>
-        {children}
-      </Container>
-    );
+    return <Container style={{ ...style }}>{children}</Container>;
   }
 }
